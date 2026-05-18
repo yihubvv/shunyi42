@@ -16,10 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-from book.views import index
+# from book.views import index
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path(路由，视图函数名)
-    # path('index/',index),
     path('', include('book.urls'))
 ]

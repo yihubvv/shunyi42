@@ -1,8 +1,7 @@
 from django.urls import path
 from book.views import index
-# 这个是固定写法 urlpatterns = []
+# This is the fixed writing pattern urlpatterns = []
 urlpatterns = [
-    # path(路由，视图函数名)
-
+    # path(route, view_function_name)
     path('index/',index)
 ]
