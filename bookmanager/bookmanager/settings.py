@@ -52,8 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'book.apps.BookConfig',  # 方案2
-    #理论上要注册子应用，我现在不注册，一会有问题
+    'book.apps.BookConfig',
 ]
 
 MIDDLEWARE = [
@@ -92,8 +91,8 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# sqlite3 关系型数据库
-# 过渡了解
+# SQLite3 relational database
+# Basic transitional overview
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -123,9 +122,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
-#设置语言
+# set language
 LANGUAGE_CODE = 'zh-Hans'#'en-us'
-#设置时区
+# set timezone
 TIME_ZONE = 'Asia/Shanghai'#'UTC'
 
 USE_I18N = True
@@ -140,7 +139,7 @@ USE_TZ = True
 
 STATIC_URL = '/ooooo/'
 
-#告知系统 我们的图片在哪里
+# Tell the system where our images are located
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
