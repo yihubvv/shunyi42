@@ -1,6 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Book(models.Model):
+    pass
 """
 1. 我们的模型类 需要继承自 models.Model
 2. 系统会自动为我们添加一个主键--id
