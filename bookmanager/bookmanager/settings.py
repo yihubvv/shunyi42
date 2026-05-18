@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'book',  #方案1
     'book.apps.BookConfig',  # 方案2
     #理论上要注册子应用，我现在不注册，一会有问题
 ]
