@@ -21,16 +21,16 @@ from django.http import HttpResponse
 # to access the view function
 
 def index(request):
+# return HttpResponse('ok')
 
-    # return HttpResponse('ok')
+# render renders the template
+# request, template_name, context=None
+# request,           the request
+# template_name,     the template name
+# context=None
+# 100/0
+# simulate a data query
 
-    # render 渲染模板
-    #request, template_name, context=None
-    #request,           请求
-    # template_name,    模板名字
-    # context=None
-    # 100/0
-    #模拟数据查询
     context={
         'name':'马上双11，点击有惊喜'
     }
