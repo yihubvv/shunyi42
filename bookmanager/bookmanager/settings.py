@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # print(os.path.abspath(__file__))
 # /home/ubuntu/Desktop/42/django_base/bookmanager/bookmanager/settings.py
 
-# dirname() 获取文件的目录
+# dirname() gets the directory of a file
 # os.path.dirname(os.path.abspath(__file__))
 # /home/ubuntu/Desktop/42/django_base/bookmanager/bookmanager
 
@@ -34,17 +34,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!u&bkei*=r1899$m1sk(awqmfjo6l(+if2(&+iif*j!5w)3hcl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# 调试模式
-# 在我们开发的时候，我们需要看到更多的信息，所以要开启debug模式
-# 当我们的程序上线之后，就改为False
+# Debug mode
+# During development, we need to see more information, so we turn on debug mode.
+# After our program goes live, change it to False.
 DEBUG = True
 
-# 允许以什么样的形式来访问我们的项目 默认是 127.0.0.1
+# Allows what forms/addresses can be used to access our project. The default is 127.0.0.1.
 ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-#注册/安装子应用
+#Register/install the sub-application.
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -67,11 +67,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bookmanager.urls'
 
-#模板配置相关
+#Template configuration related.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        #告知系统，我们的模板文件放在哪里
+        # Tell the system where our template files are located
         'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
