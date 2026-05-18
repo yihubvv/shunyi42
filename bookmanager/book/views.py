@@ -2,18 +2,23 @@ from django.shortcuts import render
 
 # Create your views here.
 """
-视图
-所谓的视图 其实就是python函数
-视图函数有2个要求：
-    1. 视图函数的第一个参数就是接收请求。这个请求其实就是 HttpRequest的类对象
-    2. 必须返回一个响应
+Views
+
+A so-called view is actually a Python function.
+
+A view function has two requirements:
+
+1. The first parameter of the view function is used to receive the request. This request is actually an object of the `HttpRequest` class.
+
+2. It must return a response.
+
 """
 # request
 from django.http import HttpRequest
 from django.http import HttpResponse
 
-# 我们期望用户输入 http://127.0.0.1:8000/index/
-# 来访问视图函数
+# We expect the user to enter http://127.0.0.1:8000/index/
+# to access the view function
 
 def index(request):
 
