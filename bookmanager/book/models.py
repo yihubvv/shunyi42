@@ -36,7 +36,18 @@ class BookInfo(models.Model):
 
 # Characters/people: copy it over first. Explain the principle later.
 class PeopleInfo(models.Model):
-    name = models.CharField(max_length=80)
-    gender = models.BooleanField()
+    GENDER_CHOICE = ((1,"male"), (2, "female"))
+    name = models.CharField(max_length=80, unique=True)
+    gender = models.SmallIntegerField(choices=GENDER_CHOICE, default=1)
+    description = models.CharField(max_length=1000, null=True)
+    is_delete = models.BooleanField(default=False)
     # Foreign key constraint: which book the character belongs to.
     book = models.ForeignKey(BookInfo,on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = "PeopleInfo"
+        verbose_name = "People"
+    # Override the __str__ method so that the admin site displays the book name
+    def __str__(self):
+        return self.name
+
