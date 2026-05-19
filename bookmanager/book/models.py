@@ -21,15 +21,22 @@ from django.db import models
 """
 class BookInfo(models.Model):
     #id
-    name=models.CharField(max_length=10)
+    name=models.CharField(max_length=80, unique=True)
+    pub_date=models.DateField(null=True)
+    readcount=models.IntegerField(default=0)
+    commentcount=models.IntegerField(default=0)
+    is_delete=models.BooleanField(default=False)
 
+    class Meta:
+        db_table = "BookInfo"
+        verbose_name = "Books"
     # Override the __str__ method so that the admin site displays the book name
     def __str__(self):
         return self.name
 
 # Characters/people: copy it over first. Explain the principle later.
 class PeopleInfo(models.Model):
-    name = models.CharField(max_length=10)
+    name = models.CharField(max_length=80)
     gender = models.BooleanField()
     # Foreign key constraint: which book the character belongs to.
     book = models.ForeignKey(BookInfo,on_delete=models.CASCADE)
