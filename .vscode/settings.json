@@ -1,10 +1,4 @@
 {
   "remote.extensionKind": {
-    "cweijan.vscode-database-client2": [
-      "workspace"
-    ],
-    "cweijan.dbclient-jdbc": [
-      "workspace"
-    ]
   }
 }

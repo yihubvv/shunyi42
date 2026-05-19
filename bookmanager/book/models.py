@@ -29,7 +29,7 @@ class BookInfo(models.Model):
 
     class Meta:
         db_table = "BookInfo"
-        verbose_name = "Books"
+        verbose_name = "Book"
     # Override the __str__ method so that the admin site displays the book name
     def __str__(self):
         return self.name
