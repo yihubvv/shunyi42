@@ -28,7 +28,7 @@ class BookInfo(models.Model):
     is_delete=models.BooleanField(default=False)
 
     class Meta:
-        db_table = "BookInfo"
+        db_table = "bookinfo"
         verbose_name = "Book"
     # Override the __str__ method so that the admin site displays the book name
     def __str__(self):
@@ -45,7 +45,7 @@ class PeopleInfo(models.Model):
     book = models.ForeignKey(BookInfo,on_delete=models.CASCADE)
 
     class Meta:
-        db_table = "PeopleInfo"
+        db_table = "peopleinfo"
         verbose_name = "People"
     # Override the __str__ method so that the admin site displays the book name
     def __str__(self):
