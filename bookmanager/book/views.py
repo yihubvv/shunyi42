@@ -30,10 +30,10 @@ def index(request):
 # context=None
 # 100/0
 # simulate a data query
-
 # update the data in the template dynamically through the context parameter
     context={
         'name':'Python Django Book',
     }
 
     return render(request,'book/index.html',context=context)
+
