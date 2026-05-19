@@ -91,14 +91,22 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# SQLite3 relational database
-# Basic transitional overview
+# MySQL database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': os.environ.get('MYSQL_HOST', 'localhost'),
+        'PORT': os.environ.get('MYSQL_PORT', '3306'),
+        'USER': os.environ.get('MYSQL_USER', 'bookmanager'),
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'mysql'),
+        'NAME': os.environ.get('MYSQL_DATABASE', 'book_42_01'),
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        },
     }
 }
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Password validation
